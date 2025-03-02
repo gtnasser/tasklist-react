@@ -121,5 +121,5 @@ $ npm run dev
 - excluir tarefa
 - incluir nova tarefa
 - consultar detalhe da tarefa
-
+- persistir dados no browser
 
