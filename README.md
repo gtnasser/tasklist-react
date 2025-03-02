@@ -28,6 +28,13 @@ export default {
 }
 ```
 
+index.css:
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
 ### carregar icones
 
 ```shell
@@ -42,6 +49,60 @@ $ git init
 $ git add .
 $ git commit -m "first commit"
 ```
+
+### criar componentes básicos
+
+```
+$ mkdir src/components
+```
+
+Tasks.jsx:
+```jsx
+function Tasks() {
+    return (
+        <h1>Tasks</h1>
+    )
+}
+export default Tasks
+```
+
+AddTasks.jsx:
+```jsx
+function AddTask() {
+    return (
+        <h1>Add Task</h1>
+    )
+}
+export default AddTask
+```
+
+App.css:
+```css
+```
+
+App.jsx:
+```js
+import Tasks from './components/Tasks.jsx'
+import AddTask from './components/AddTask.jsx'
+import { SmilePlus } from "lucide-react"
+function App() {
+    return (
+        <div>
+            <h1 className="text-red-500"><SmilePlus />Gerenciador de Tarefas</h1>
+            <AddTask />
+            <Tasks />
+        </div>
+    )
+}
+export default App
+```
+
+verificar estilos e ícones
+
+```shell
+$ npm run dev
+```
+
 
 
 
