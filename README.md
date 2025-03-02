@@ -123,3 +123,12 @@ $ npm run dev
 - consultar detalhe da tarefa
 - persistir dados no browser
 
+### Deploy
+
+O Vite já minifica os códigos javascript para melhorar a performance
+```shell
+$ npm run build
+```
+
+[Live  Vercel/](https://tasklist-react-alpha.vercel.app/)
+
