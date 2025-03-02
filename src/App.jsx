@@ -4,51 +4,69 @@ import { useState } from 'react'
 
 function App() {
 
-  const [tasks, setTasks] = useState([{
-      id: 1,
-      title: "Estudar programação",
-      isCompleted: false
+    const [tasks, setTasks] = useState([{
+        id: 1,
+        title: "Estudar programação",
+        isCompleted: false
     },
     {
-      id: 2,
-      title: "Fazer exercícios",
-      isCompleted: false
+        id: 2,
+        title: "Fazer exercícios",
+        isCompleted: false
     },
     {
-      id: 3,
-      title: "Tomar muito café",
-      isCompleted: false
+        id: 3,
+        title: "Tomar muito café",
+        isCompleted: false
     },
-  ])
+    ])
 
-  function onTaskClick(taskId) {
-    const newTasks = tasks.map((task) => {
-      if (task.id === taskId) {
-        //task.isCompleted = !task.isCompleted
-        //return task
-        return {...task, isCompleted: !task.isCompleted}
-      }
-      return task
-    })
-    setTasks(newTasks)
-  }
+    // id das tarefas, nunca vai repetir
+    const [counterId, setCounterId] = useState(tasks.length)
 
-  function onDeleteTaskClick(taskId) {
-    const newTasks = tasks.filter((task) => {
-      return (task.id !== taskId)
-    })
-    setTasks(newTasks)
-  }
+    function newId() {
+        setCounterId(Math.max(tasks.length, counterId) + 1)
+        return Math.max(tasks.length, counterId) + 1
+    }
 
-  return (
-    <div className="w-screen h-screen bg-slate-500 flex justify-center p-6">
-      <div className="w-[500px] space-y-4">
-        <h1 className="text-3xl text-slate-100 font-bold text-center">Gerenciador de Tarefas</h1>
-        <AddTask />
-        <Tasks tasks={tasks} onTaskClick={onTaskClick} onDeleteTaskClick={onDeleteTaskClick} />
-      </div>
-    </div>
-  )
+    function onTaskClick(taskId) {
+        const newTasks = tasks.map((task) => {
+            if (task.id === taskId) {
+                //task.isCompleted = !task.isCompleted
+                //return task
+                return { ...task, isCompleted: !task.isCompleted }
+            }
+            return task
+        })
+        setTasks(newTasks)
+    }
+
+    function onDeleteTaskClick(taskId) {
+        const newTasks = tasks.filter((task) => {
+            return (task.id !== taskId)
+        })
+        setTasks(newTasks)
+    }
+
+    function onAddTaskSubmit(title, description) {
+        const newTask = {
+            id: newId(),
+            title: title,
+            description: description,
+            isComplete: false
+        }
+        setTasks([...tasks, newTask])
+    }
+
+    return (
+        <div className="w-screen h-screen bg-slate-500 flex justify-center p-6">
+            <div className="w-[500px] space-y-4">
+                <h1 className="text-3xl text-slate-100 font-bold text-center">Gerenciador de Tarefas</h1>
+                <AddTask onAddTaskSubmit={onAddTaskSubmit} />
+                <Tasks tasks={tasks} onTaskClick={onTaskClick} onDeleteTaskClick={onDeleteTaskClick} />
+            </div>
+        </div>
+    )
 }
 
 export default App

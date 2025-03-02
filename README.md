@@ -108,6 +108,6 @@ $ npm run dev
 - persistir a lista de tarefas e mostrar naa tela
 - trocar status (pendente/finalizada)
 - excluir tarefa
-
+- incluir nova tarefa
 
 
