@@ -9,6 +9,11 @@ $ npm create vite@5.5.2 .
 $ npm install
 ```
 
+### instalar router
+```shell
+$ npm install react-router@6.26.1
+```
+
 ### instalar o [Tailwindcss](https://r.search.yahoo.com/_ylt=Awriqu71fMNnFwIACKjz6Qt.;_ylu=Y29sbwNiZjEEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1742074357/RO=10/RU=https%3a%2f%2ftailwindcss.com%2f/RK=2/RS=_OgqEZ7ssCh9JJ3KhjMX7xcNyQY-) e dependências, e cria os templates
 
 ```shell
@@ -39,6 +44,12 @@ index.css:
 
 ```shell
 $ npm install lucide-react@0.435.0
+```
+
+### carregar gerador de id único
+
+```shell
+$ npm install uuid@10.0.0
 ```
 
 ### iniciar o repositório
@@ -109,5 +120,6 @@ $ npm run dev
 - trocar status (pendente/finalizada)
 - excluir tarefa
 - incluir nova tarefa
+- consultar detalhe da tarefa
 
 

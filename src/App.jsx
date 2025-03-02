@@ -8,16 +8,19 @@ function App() {
     const [tasks, setTasks] = useState([{
         id: 1,
         title: "Estudar programação",
+        description: "Estudar programação para se tornar um desenvolvedor full stack",
         isCompleted: false
     },
     {
         id: 2,
         title: "Fazer exercícios",
+        description: "Fazer exercícios físicos para manter a postura correta e os músculos ativos",
         isCompleted: false
     },
     {
         id: 3,
         title: "Tomar muito café",
+        description: "Uma boa dose de cafeína vai ajudar nas longas madrugadas procurando aquele bug no código...",
         isCompleted: false
     },
     ])
