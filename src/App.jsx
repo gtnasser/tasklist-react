@@ -1,6 +1,7 @@
 import Tasks from './components/Tasks.jsx'
 import AddTask from './components/AddTask.jsx'
 import { useState } from 'react'
+import { v4 } from 'uuid'
 
 function App() {
 
@@ -21,13 +22,6 @@ function App() {
     },
     ])
 
-    // id das tarefas, nunca vai repetir
-    const [counterId, setCounterId] = useState(tasks.length)
-
-    function newId() {
-        setCounterId(Math.max(tasks.length, counterId) + 1)
-        return Math.max(tasks.length, counterId) + 1
-    }
 
     function onTaskClick(taskId) {
         const newTasks = tasks.map((task) => {
@@ -50,7 +44,7 @@ function App() {
 
     function onAddTaskSubmit(title, description) {
         const newTask = {
-            id: newId(),
+            id: v4(),
             title: title,
             description: description,
             isComplete: false
