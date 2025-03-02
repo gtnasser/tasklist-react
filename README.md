@@ -106,5 +106,7 @@ $ npm run dev
 ### próximos passos
 
 - persistir a lista de tarefas e mostrar naa tela
+- trocar status (pendente/finalizada)
+
 
 
