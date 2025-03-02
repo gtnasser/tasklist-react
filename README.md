@@ -1,5 +1,41 @@
 # TaskManager React
 
+![Tela principal](docs/home.png)
+
+Projeto baseado em [React](https://react.dev/) para gerenciar uma lista de atividades, baseado no workshop **Full Stack Week** da Full Stack Club.
+
+Foram explorados os conceitos de modularização e roteamento do React, consulta a API e persistência das tarefas no *localStorage* do navegador, e customização do front-end com [Tailwindcss](https://r.search.yahoo.com/_ylt=Awriqu71fMNnFwIACKjz6Qt.;_ylu=Y29sbwNiZjEEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1742074357/RO=10/RU=https%3a%2f%2ftailwindcss.com%2f/RK=2/RS=_OgqEZ7ssCh9JJ3KhjMX7xcNyQY-) e dependências, e cria os templates.
+
+Funcionaldades Básicas
+
+- Criar nova Tarefa
+- Marcar/desmarcar a tarefa como executada
+- Excluir uma tarefa
+- Visualizar detalhes da tarefa
+- Dados persistidos localmente no navegador
+
+
+
+# Para executar este projeto:
+
+0. Instalar o [node.js](https://nodejs.org) se necessário
+
+1. Abrir o terminal e executar os comandos abaixo:
+
+```shell
+git clone https://github.com/gtnasser/tasklist-react.git
+cd tasklist-react
+npm install
+npm run ev
+```
+
+2. Abrir o browser em http://localhost:5173/
+
+OU acesse a [Live Demo](https://tasklist-react-alpha.vercel.app/) publicada no [Vercel](https://vercel.com/)
+
+
+# Acompanhando o desenvolvimento - Primeiros passos
+
 ### criar projeto [React](https://react.dev/) usando o [Vite](https://vite.dev/guide/)
 
 ```shell
@@ -125,10 +161,8 @@ $ npm run dev
 
 ### Deploy
 
-O Vite já minifica os códigos javascript para melhorar a performance
 ```shell
 $ npm run build
 ```
 
-[Live  Vercel/](https://tasklist-react-alpha.vercel.app/)
 
