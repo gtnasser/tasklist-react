@@ -103,10 +103,11 @@ verificar estilos e ícones
 $ npm run dev
 ```
 
-### próximos passos
+### próximos passos: desenvolver funcionalidades
 
 - persistir a lista de tarefas e mostrar naa tela
 - trocar status (pendente/finalizada)
+- excluir tarefa
 
 
 
